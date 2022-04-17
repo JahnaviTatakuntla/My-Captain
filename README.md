@@ -1,28 +1,43 @@
 # My-Captain
-//C program to swap two numbers without
-       using a temporary variable
+//C program for getting student grades when marks
+     are given as input
 
-#include<stdio.h>
 
-int main()
+#include <stdio.h>
 
+int main() 
 {
+ int marks;
+ printf("enter your marks");
+ scanf("%d",&marks);
+ 
+ if(marks>=85 && marks<=100)
+ {
+   printf("Grade A");
+ }
+ 
+ else if(marks>=70 && marks<=84)
+ {
+     printf("Grade B");
+ }
 
-int a=10,b=20;
-
-printf("Before swapping a=%d b=%d",a,b);
-
-a=a+b;//a=30 (10+20)
-
-b=a-b;//b=10 (30-20) 
-
-a=a-b;//a=20 (30-10)
-
-printf("\n After swapping a=%d b=%d",a,b);
-
-return 0;
-
+else if(marks>=55 && marks<=69)
+{
+    printf("Grade C");
 }
 
+else if(marks>=40 && marks<=54)
+{
+    printf("Grade D");
+}
+else if(marks<40)
+{
+   printf("Grade F");
+}
+else
+{
+ printf("wrong choice");
+}
+}
 
 

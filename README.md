@@ -1,43 +1,39 @@
 # My-Captain
-//C program for getting student grades when marks
-     are given as input
-
 
 #include <stdio.h>
 
 int main() 
 {
- int marks;
- printf("enter your marks");
- scanf("%d",&marks);
- 
- if(marks>=85 && marks<=100)
+ int choice;
+ printf("1.pizza-🍕\n 2.Burger-🍔\n 3.Pasta-🍝\n 4.French fries-🍟\n 5.Sandwich-🥪\n");
+ printf("Enter your choice");
+ scanf("%d",&choice);
+
+ switch(choice)
  {
-   printf("Grade A");
+   case 1:
+   printf("Food item:Pizza-🍕/n Price:Rs 239");
+   break;
+   
+   case 2:
+   printf("Food item:Burger-🍔\n Price:Rs 129");
+   break;
+   
+   case 3:
+   printf("Food item:Pasta-🍝\n Price:Rs 179");
+   break;
+   
+   case 4:
+   printf("Food item:French fries-🍟\n Price:Rs 99");
+   break;
+   
+   case 5:
+   printf("Food item:Sandwich-🍔\n Price:Rs 149");
+   break;
+  
+   default:
+   printf("invalid choice");
+   break;
  }
  
- else if(marks>=70 && marks<=84)
- {
-     printf("Grade B");
- }
-
-else if(marks>=55 && marks<=69)
-{
-    printf("Grade C");
 }
-
-else if(marks>=40 && marks<=54)
-{
-    printf("Grade D");
-}
-else if(marks<40)
-{
-   printf("Grade F");
-}
-else
-{
- printf("wrong choice");
-}
-}
-
-

@@ -1,32 +1,35 @@
 # My-Captain
 
+
 #include <stdio.h>
-int main() 
+
+/* Function declaration */
+int sumOfDigits(int num);
+
+
+int main()
 {
-   int n,col,row;
-   printf("Enter the number of rows: ");
-   scanf("%d", &row);
-for (row = 0; row < n; row++) 
+    int num, sum;
+    
+    printf("Enter any number to find sum of digits: ");
+    scanf("%d", &num);
+    
+    sum = sumOfDigits(num);
+    
+    printf("Sum of digits of %d = %d", num, sum);
+    
+    return 0;
+}
 
-    {
 
-        for (col = 0;col <=row; col++) 
-
-        {
-
-            if (((row + col) % 2) == 0) 
-
-                printf("0");
-
-            else
-
-                printf("1");
-
+/**
+ * Recursive function to find sum of digits of a number
+ */
+int sumOfDigits(int num)
+{
+    // Base condition
+    if(num == 0)
+        return 0;
         
-
-        }
-
-        printf("\n");
-
-    }   
+    return ((num % 10) + sumOfDigits(num / 10));
 }

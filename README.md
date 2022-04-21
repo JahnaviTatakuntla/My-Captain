@@ -1,9 +1,9 @@
 # My-Captain
 
-
 #include <stdio.h>
 
 /* Function declaration */
+
 int sumOfDigits(int num);
 
 
@@ -22,12 +22,11 @@ int main()
 }
 
 
-/**
- * Recursive function to find sum of digits of a number
- */
+ /*Recursive function to find sum of digits of a number */
+ 
 int sumOfDigits(int num)
 {
-    // Base condition
+
     if(num == 0)
         return 0;
         

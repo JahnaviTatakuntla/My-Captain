@@ -14,7 +14,7 @@ typedef struct{
 int main()
 {
     //number of employees
-    int n=20;
+    int n=2;
 
     //array to store structure values of all employees
     Employee employees[n];
@@ -24,7 +24,7 @@ int main()
     for(int i=0; i<n; i++){
         printf("Employee %d:- \n",i+1);
 
-        //NAME
+        //Name
         printf("Name: ");
         scanf("%[^\n]s",employees[i].name);
 
@@ -37,33 +37,38 @@ int main()
      scanf("%d",&employees[i].phone);
         
         
-        //SALARY
+        //Salary
         printf("Salary: ");
         scanf("%lf",&employees[i].salary);
+
+        //to consume extra '\n' input
         char ch = getchar();
  
         printf("\n");
     }
     
-    
 //Displaying Employee details
-    printf("-----Employees Details -----\n");
-    for(int i=0; i<n; i++)
-    {
-     printf("Name \t");
-     printf("age \t");
-     printf("phone no \t");
-     printf("Salary \t ");
-        
+
+printf("-------------- All Employees Details ---------------\n");
+    
+ printf("Name\t  age\t  phone no\t  salary");
+ printf("\n");
+
+for(int i=0; i<n; i++) 
+{
+    printf("%s\t",employees[i].name);
  
- printf("%s \t",employees[i].name);
- printf("%d \t",employees[i].age);
- printf("%d \t",employees[i].phone);
- printf("%.2lf \t",employees[i].salary);
-   
-   printf("\n");
-   
-   }
+        
+    printf("%d\t",employees[i].age);
+        
+  
+    printf("%d\t",employees[i].phone);
+       
+
+    printf("%.2lf\t",employees[i].salary);
+ 
+        printf("\n");
+    }
  
     return 0;
 }
